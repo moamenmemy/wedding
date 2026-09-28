@@ -28,7 +28,6 @@
       </div>
 
       <!-- مرجع الآية -->
-      <!-- تم تطبيق الخط هنا (على الرغم من أنه رقم عربي/لاتيني مدمج، سيبدو أجمل بـ Parisienne) -->
       <span class="parisienne-regular text-xs md:text-sm text-[#9e927f] tracking-widest block font-light mt-4">
         سُورَةُ الرُّومِ • الآية ٢١
       </span>
@@ -38,21 +37,39 @@
     <!-- شبكة العرض (الصورة يميناً، التفاصيل يساراً) -->
     <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center pt-4">
       
-      <!-- إطار الصورة المقوس -->
-      <div class="lg:col-span-5 flex justify-center" #venn>
+      <!-- إطار الصورة المقوس (مع وضع التتاج والشعار فوقه في الموبايل فقط باستخدام order) -->
+      <div class="lg:col-span-5 flex flex-col items-center justify-center" #venn>
+        
+        <!-- التاج والشعار: يظهر فوق الصورة في الموبايل (order-1) ويختفي من هنا في الشاشات الكبيرة (lg:hidden) -->
+        <div class="flex lg:hidden flex-col items-center justify-center mb-6 text-center">
+          <div class="relative z-20 -mb-1 text-[#d4af37] drop-shadow-[0_0_5px_rgba(212,175,55,0.8)]">
+            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+              <path d="M5 16L3 5l5.5 5L12 4l3.5 6L21 5l-2 11H5m14 3c0 .6-.4 1-1 1H6c-.6 0-1-.4-1-1v-1h14v1Z"/>
+            </svg>
+          </div>
+          <div class="relative p-1.5 rounded-[16px] bg-gradient-to-b from-[#d4af37]/50 via-[#2a241b]/70 to-[#d4af37]/40 shadow-[0_0_12px_rgba(212,175,55,0.3)]">
+            <div class="relative w-20 h-20 bg-[#12110f]/90 rounded-[12px] border border-[#d4af37] flex items-center justify-center shadow-inner overflow-hidden">
+              <div class="absolute inset-0 bg-gradient-to-tr from-transparent via-[#d4af37]/15 to-transparent pointer-events-none"></div>
+              <div class="relative z-10 flex items-center justify-center gap-0.5 text-2xl font-bold tracking-wider" style="font-family: 'Cinzel', 'Times New Roman', serif;">
+                <span class="text-[#f3e5ab] drop-shadow-[0_1px_2px_rgba(0,0,0,0.8)]">S</span>
+                <span class="text-[#d4af37] text-sm font-light mx-0.5 opacity-80">&</span>
+                <span class="text-[#f3e5ab] drop-shadow-[0_1px_2px_rgba(0,0,0,0.8)]">M</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
         <div class="relative w-full max-w-lg">
           <div class="absolute -inset-1 bg-gradient-to-r from-[#d4af37]/40 via-[#ffe082]/60 to-[#d4af37]/40 rounded-t-[210px] rounded-b-3xl blur-md opacity-75 animate-pulse"></div>
           
-        
-        <!-- شارة التاريخ المعدلة لتناسب الموبايل بشكل أفضل -->
-<div class="parisienne-regular absolute top-8 left-1/2 -translate-x-1/2 bg-[#d4af37] text-black text-[10px] sm:text-xs font-bold px-4 sm:px-5 py-1.5 rounded-full uppercase tracking-wider sm:tracking-widest z-20 shadow-lg whitespace-nowrap">
-  October 17, 2026
-</div>
+          <!-- شارة التاريخ -->
+          <div class="parisienne-regular absolute top-8 left-1/2 -translate-x-1/2 bg-[#d4af37] text-black text-[10px] sm:text-xs font-bold px-4 sm:px-5 py-1.5 rounded-full uppercase tracking-wider sm:tracking-widest z-20 shadow-lg whitespace-nowrap">
+            October 17, 2026
+          </div>
           
           <div class="relative rounded-t-[200px] overflow-hidden border-2 border-[#d4af37] shadow-[0_0_25px_rgba(212,175,55,0.4)] bg-[#1c1a17] h-[640px] z-10">
             <img src="/hero.jpeg" alt="أحمد وزين" class="w-full h-full object-cover opacity-95">
             <div class="absolute bottom-4 left-4 right-4 bg-black/60 backdrop-blur-md border border-[#d4af37]/40 p-3 rounded text-center">
-              <!-- توقيع M & S: تم تطبيق الكلاس parisienne-regular هنا -->
               <p class="parisienne-regular text-[22px] text-[#b5a995] font-semibold">M & S</p>
             </div>
           </div>
@@ -62,40 +79,40 @@
       <!-- تفاصيل الدعوة -->
       <div class="lg:col-span-7 text-right space-y-6" dir="rtl" #venn>
         <div class="flex items-center justify-start gap-4">
-            <div class="flex flex-col items-start ">
-          <div class="text-[#d4af37] text-[28px] md:text-[50px] tracking-widest mb-2 font-light opacity-90" style="font-family: 'Amiri', serif;">
-            محمد & سلوي 
-          </div>
-          <div class="relative z-25 flex flex-col items-center justify-center p-2 text-center">
-            <div class="relative z-20 -mb-1 text-[#d4af37] drop-shadow-[0_0_5px_rgba(212,175,55,0.8)]">
-              <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
-                <path d="M5 16L3 5l5.5 5L12 4l3.5 6L21 5l-2 11H5m14 3c0 .6-.4 1-1 1H6c-.6 0-1-.4-1-1v-1h14v1Z"/>
-              </svg>
-            </div>
-            <div class="relative p-1.5 rounded-[16px] bg-gradient-to-b from-[#d4af37]/50 via-[#2a241b]/70 to-[#d4af37]/40 shadow-[0_0_12px_rgba(212,175,55,0.3)]">
-              <div class="relative w-20 h-20 bg-[#12110f]/90 rounded-[12px] border border-[#d4af37] flex items-center justify-center shadow-inner overflow-hidden">
-                <div class="absolute inset-0 bg-gradient-to-tr from-transparent via-[#d4af37]/15 to-transparent pointer-events-none"></div>
-                <div class="relative z-10 flex items-center justify-center gap-0.5 text-2xl font-bold tracking-wider" style="font-family: 'Cinzel', 'Times New Roman', serif;">
-                  <span class="text-[#f3e5ab] drop-shadow-[0_1px_2px_rgba(0,0,0,0.8)]">S</span>
-                  <span class="text-[#d4af37] text-sm font-light mx-0.5 opacity-80">&</span>
-                  <span class="text-[#f3e5ab] drop-shadow-[0_1px_2px_rgba(0,0,0,0.8)]">M</span>
+          <div class="flex flex-col items-start">
+           <div class="hidden lg:block text-[#d4af37] text-[28px] md:text-[50px] tracking-widest mb-2 font-light opacity-90" style="font-family: 'Amiri', serif;">
+  محمد & سلوي 
+</div>
+            
+            <!-- التاج والشعار في الشاشات الكبيرة يظهر هنا طبيعياً، ويختفي في الموبايل لكي لا يتكرر -->
+            <div class="hidden lg:flex relative z-25 flex-col items-center justify-center p-2 text-center">
+              <div class="relative z-20 -mb-1 text-[#d4af37] drop-shadow-[0_0_5px_rgba(212,175,55,0.8)]">
+                <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                  <path d="M5 16L3 5l5.5 5L12 4l3.5 6L21 5l-2 11H5m14 3c0 .6-.4 1-1 1H6c-.6 0-1-.4-1-1v-1h14v1Z"/>
+                </svg>
+              </div>
+              <div class="relative p-1.5 rounded-[16px] bg-gradient-to-b from-[#d4af37]/50 via-[#2a241b]/70 to-[#d4af37]/40 shadow-[0_0_12px_rgba(212,175,55,0.3)]">
+                <div class="relative w-20 h-20 bg-[#12110f]/90 rounded-[12px] border border-[#d4af37] flex items-center justify-center shadow-inner overflow-hidden">
+                  <div class="absolute inset-0 bg-gradient-to-tr from-transparent via-[#d4af37]/15 to-transparent pointer-events-none"></div>
+                  <div class="relative z-10 flex items-center justify-center gap-0.5 text-2xl font-bold tracking-wider" style="font-family: 'Cinzel', 'Times New Roman', serif;">
+                    <span class="text-[#f3e5ab] drop-shadow-[0_1px_2px_rgba(0,0,0,0.8)]">S</span>
+                    <span class="text-[#d4af37] text-sm font-light mx-0.5 opacity-80">&</span>
+                    <span class="text-[#f3e5ab] drop-shadow-[0_1px_2px_rgba(0,0,0,0.8)]">M</span>
+                  </div>
                 </div>
               </div>
             </div>
+
           </div>
         </div>
-        </div>
-        <div>
-          <!-- النص الإنجليزي: تم تطبيق الكلاس parisienne-regular هنا -->
+
+        <div class="text-center sm:text-right">
           <span class="parisienne-regular text-xl text-[#b5a995] tracking-widest block uppercase mb-1">Celebrating the Wedding of</span>
-          
-          <!-- العنوان العربي: تم تركه كما هو بخط Amiri الفخم -->
           <h1 class="text-4xl md:text-5xl font-bold text-[#d4af37] mb-2" style="font-family: 'Amiri', serif;">
             محمد <span class="text-white">&</span> سلوي
           </h1>
         </div>
         
-        <!-- النص العربي للترحيب (تم تركه كما هو لضمان سهولة القراءة) -->
         <p class="text-sm md:text-2xl text-[#b5a995] leading-relaxed max-w-xl">
           يتشرفان بدعوتكم لمشاركتهما فرحة العمر وإكمال بهجتنا بوجودكم في ليلة تضضاء بنور محبتكم، وتزدان بحضوركم الكريم لننسج معاً أبهى الذكريات الخالدة.
         </p>
