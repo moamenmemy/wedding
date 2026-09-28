@@ -1,0 +1,83 @@
+<div class="pt-20 pb-12 px-4 flex justify-center" #venn dir="rtl">
+  <!-- البرواز الداكن الرئيسي المحيط بالعداد -->
+  <div class="w-full max-w-4xl bg-[#171512] border border-[#d4af37]/20 rounded-2xl p-8 shadow-[0_0_30px_rgba(0,0,0,0.8)] text-center relative overflow-hidden">
+    
+    <!-- العنوان العلوي -->
+    <p class="text-xs md:text-sm text-[#d4af37] tracking-[0.25em] uppercase mb-2 font-light">
+      COUNTING DOWN TO OUR ROYAL NIGHT
+    </p>
+    <h2 class="text-2xl md:text-4xl text-[#e6dfd5] font-bold mb-8" style="font-family: 'Amiri', serif;">
+      الأيام المتبقية حتى ليلة العمر
+    </h2>
+
+    <!-- شبكة مربعات العداد -->
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-3xl mx-auto mb-8" dir="ltr">
+      
+      <!-- مربع الأيام (Days) -->
+      <div class="bg-[#1c1a17] border border-[#d4af37]/30 rounded-xl p-5 shadow-lg flex flex-col items-center justify-center">
+        <span class="text-3xl md:text-5xl font-bold text-[#d4af37] tracking-wider mb-1" style="font-family: 'Cinzel', serif;">
+          {{ days }}
+        </span>
+        <span class="text-xs text-[#b5a995] tracking-widest uppercase">
+          DAYS <span class="mx-1">•</span> يوم
+        </span>
+      </div>
+
+      <!-- مربع الساعات (Hours) -->
+      <div class="bg-[#1c1a17] border border-[#d4af37]/30 rounded-xl p-5 shadow-lg flex flex-col items-center justify-center">
+        <span class="text-3xl md:text-5xl font-bold text-[#d4af37] tracking-wider mb-1" style="font-family: 'Cinzel', serif;">
+          {{ hours }}
+        </span>
+        <span class="text-xs text-[#b5a995] tracking-widest uppercase">
+          HOURS <span class="mx-1">•</span> ساعة
+        </span>
+      </div>
+
+      <!-- مربع الدقائق (Minutes) -->
+      <div class="bg-[#1c1a17] border border-[#d4af37]/30 rounded-xl p-5 shadow-lg flex flex-col items-center justify-center">
+        <span class="text-3xl md:text-5xl font-bold text-[#d4af37] tracking-wider mb-1" style="font-family: 'Cinzel', serif;">
+          {{ minutes }}
+        </span>
+        <span class="text-xs text-[#b5a995] tracking-widest uppercase">
+          MINUTES <span class="mx-1">•</span> دقيقة
+        </span>
+      </div>
+
+      <!-- مربع الثواني (Seconds) -->
+      <div class="bg-[#1c1a17] border border-[#d4af37]/30 rounded-xl p-5 shadow-lg flex flex-col items-center justify-center">
+        <span class="text-3xl md:text-5xl font-bold text-[#d4af37] tracking-wider mb-1" style="font-family: 'Cinzel', serif;">
+          {{ seconds }}
+        </span>
+        <span class="text-xs text-[#b5a995] tracking-widest uppercase">
+          SECONDS <span class="mx-1">•</span> ثانية
+        </span>
+      </div>
+
+    </div>
+
+ <div class="flex flex-wrap justify-center gap-4 mt-6">
+      
+      <!-- زر تقويم جوجل -->
+      <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=زفاف+محمد+وسلوي&dates=20261017T180000Z/20261017T220000Z&details=حفل+زفاف+مبارك+حضوركم+يسعدنا" 
+         target="_blank"
+         class="bg-[#1c1a17] hover:bg-[#25221e] border border-[#d4af37]/40 text-[#e6dfd5] px-6 py-2.5 rounded-lg text-sm flex items-center gap-2 transition-all duration-300 shadow-md">
+        <svg class="w-4 h-4 text-[#d4af37]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+        </svg>
+        <span>إضافة إلى تقويم Google</span>
+      </a>
+
+      <!-- زر تقويم آبل (يعمل عبر تحميل ملف تقويم تفاعلي ICS مدمج) -->
+      <a href="data:text/calendar;charset=utf8,BEGIN:VCALENDAR%0AVERSION:2.0%0ABEGIN:VEVENT%0ASUMMARY:زفاف%20محمد%20وسلوي%0ADESCRIPTION:حفل%20زفاف%20مبارك%20حضوركم%20يسعدنا%0ADTSTART:20261017T180000Z%0ADTEND:20261017T220000Z%0AEND:VEVENT%0AEND:VCALENDAR" 
+         download="wedding-mohamed-salwa.ics"
+         class="bg-[#1c1a17] hover:bg-[#25221e] border border-[#d4af37]/40 text-[#e6dfd5] px-6 py-2.5 rounded-lg text-sm flex items-center gap-2 transition-all duration-300 shadow-md">
+        <svg class="w-4 h-4 text-[#d4af37]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+        </svg>
+        <span>Apple Calendar</span>
+      </a>
+
+    </div>
+
+  </div>
+</div>
