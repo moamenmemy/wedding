@@ -12,8 +12,8 @@ import { MemoryItem } from './interface/memories';
 export class Memories {
   memoriesList: MemoryItem[] = [
     {
-      imageUrl: '/me2.jpeg',
-      date: '2023',
+      imageUrl: '/me9.jpeg',
+      date: '2021',
       spanClass: 'col-span-2 row-span-2' // صورة رئيسية كبيرة
     },
     {
@@ -22,8 +22,8 @@ export class Memories {
       spanClass: 'col-span-1 row-span-1'
     },
     {
-      imageUrl: '/me5.jpeg',
-      date: '2026',
+      imageUrl: '/me7.jpeg',
+      date: '2021',
       spanClass: 'col-span-1 row-span-2' // صورة طولية مميزة
     },
     {
